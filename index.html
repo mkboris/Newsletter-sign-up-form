@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Join our monthly newsletter to stay updated on the latest in product management. Receive tips on product discovery, success measurement, and more. Subscribe now and get a confirmation email to finalize your subscription."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <!-- Sign-up form start -->
+      <div id="sign-up" class="wrapper show">
+        <picture>
+          <source
+            media="(min-width: 58.75rem)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            class="illustration"
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </picture>
+        <div class="wrapper__text-form">
+          <div class="text">
+            <h1 class="heading">Stay updated!</h1>
+            <p class="paragraph main-p">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="list">
+              <li class="paragraph">
+                <span class="icon-list"></span>Product discovery and building
+                what matters
+              </li>
+              <li class="paragraph">
+                <span class="icon-list"></span>Measuring to ensure updates are a
+                success
+              </li>
+              <li class="paragraph">
+                <span class="icon-list"></span>And much more!
+              </li>
+            </ul>
+          </div>
+          <form novalidate id="form" class="form">
+            <div class="label-error">
+              <label class="label" for="email">Email address</label>
+              <span aria-live="polite" id="error-message"></span>
+            </div>
+            <input
+              class="email-input"
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="true"
+              placeholder="email@company.com"
+              aria-describedby="error-message"
+            />
+            <button type="submit" id="btn" class="btn paragraph">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <div id="success-msg" class="success-msg hidden">
+        <img class="icon-success" src="assets/images/icon-success.svg" alt="" />
+        <h2 class="heading heading-success">Thanks for subscribing!</h2>
+        <p class="paragraph">
+          A confirmation email has been sent to
+          <span id="email-span" class="email-span"></span>. Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <button id="successBtn" class="btn btn-success">Dismiss message</button>
+      </div>
+      <!-- Success message end -->
+    </main>
+  </body>
+</html>

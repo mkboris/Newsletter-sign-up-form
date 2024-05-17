@@ -1,0 +1,320 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #36384d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+
+.wrapper__text-form {
+  padding: 2.5rem 1.5rem;
+}
+
+.main-p {
+  margin-top: 1.5rem;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: #242742;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #242742;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.illustration {
+  width: 37.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.list li {
+  padding-left: 1.875rem;
+  position: relative;
+}
+
+.list li:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.icon-list {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("assets/images/icon-list.svg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.label-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 150%;
+  color: #242742;
+}
+
+#error-message {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 150%;
+  text-align: right;
+  color: #ff6155;
+}
+
+.email-input {
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #242742;
+  padding: 1em 1.5em;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #242742;
+  opacity: 0.5;
+}
+
+.btn {
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  background: #242742;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
+  box-shadow: 0 1rem 2rem rgba(255, 97, 85, 0.5);
+}
+
+.btn:focus-visible {
+  outline-offset: -0.25rem;
+}
+
+.show {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.success-msg {
+  background: #ffffff;
+  padding: 1.5rem;
+  height: 100vh;
+}
+
+.heading-success {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-success {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.email-span {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 58.75rem) {
+  .wrapper {
+    flex-direction: row-reverse;
+    justify-content: center;
+    box-shadow: 0 0.9375rem 3.75rem rgba(0, 0, 0, 0.25);
+    border-radius: 2.25rem;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    gap: 4rem;
+  }
+
+  .wrapper__text-form {
+    padding: 0;
+    max-width: 23.5rem;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .illustration {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 37.5rem) {
+  body {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .success-msg {
+    padding: 3rem 4rem 4rem;
+    box-shadow: 0 0.9375rem 3.75rem rgba(0, 0, 0, 0.25);
+    border-radius: 2.25rem;
+    max-width: 31.5rem;
+    height: auto;
+  }
+
+  .heading-success {
+    font-size: 3.5rem;
+  }
+
+  .btn-success {
+    margin-top: 2.5rem;
+  }
+}
