@@ -6,7 +6,6 @@
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -30,10 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
-- [Live Site]()
-
-## My process
+- [Solution](https://github.com/mkboris/Newsletter-sign-up-form)
+- [Live Site](https://newsletter-sign-up-form-orcin.vercel.app/)
 
 ### Built with
 
